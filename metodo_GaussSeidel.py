@@ -26,5 +26,5 @@ for l in range(7):
         error=(abs(vectorX[i]-vectorX2[i])/vectorX[i])*100
         vectorX2[i]=vectorX[i]
         print(f"El valor de X{i+1} es: {vectorX[i]}\nCon un error de: "+"{:.{}}".format(error,4 if error <= 100 else 2)+"%\n")
-
+#hola
 
