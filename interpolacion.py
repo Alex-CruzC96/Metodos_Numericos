@@ -16,8 +16,8 @@ def newton_interpolation(x_data, y_data):
         p = a[k] + (x - x_data[k])*p
     return sp.expand(p)
 
-x_data=[1,0,-3]
-y_data=[2,4,-2]
+x_data=[0.6,0.7,0.8,1]
+y_data=[-0.176,0.013,0.223,0.658]
 
 p = newton_interpolation(x_data, y_data)
 print(f"El polinomio interpolante es {p}")
