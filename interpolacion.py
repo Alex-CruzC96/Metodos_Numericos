@@ -16,8 +16,19 @@ def newton_interpolation(x_data, y_data):
         p = a[k] + (x - x_data[k])*p
     return sp.expand(p)
 
-x_data=[0.6,0.7,0.8,1]
-y_data=[-0.176,0.013,0.223,0.658]
+x_data=[]
+y_data=[]
+
+while(True):
+    try:
+        x_data.append(float(input("Ingresa los valroes de X o ingrese una letra para terminar: ")))
+    except ValueError:
+        break
+while(True):
+    try:
+        y_data.append(float(input("Ingrese los valores para f(X) o ingrese una letra para terminar: ")))
+    except ValueError:
+        break
 
 p = newton_interpolation(x_data, y_data)
 print(f"El polinomio interpolante es {p}")

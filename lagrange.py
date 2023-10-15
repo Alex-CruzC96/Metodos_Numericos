@@ -8,10 +8,24 @@ def lagrange(points):
         for j in range(len(points)):
             if i != j:
                 p *= (x - points[j][0]) / (points[i][0] - points[j][0])
-        L += p * points[i][1]
+        temp=p*points[i][1]
+        print(f"L{i} = {expand(temp)}","\n")
+        L += temp
     return expand(L)
 
-points=[(0.6,-0.176),(0.7,0.013),(0.8,0.223),(1,0.658)]
+points=[]
+while(True):
+    try:
+        print("Ingrese una letra para terminar.")
+        temp=[]
+        for i in range(2):
+            temp.append(float(input("Ingrese una coordenada: ")))
+        print(temp,"\n")
+        points.append(list(temp))
+        temp.clear()
+    except ValueError:
+        break
+
 polynomial = lagrange(points)
-print(polynomial)
+print("Pn(X)= "+str(polynomial))
 
