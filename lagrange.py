@@ -1,4 +1,5 @@
 from sympy import symbols, expand
+from sympy.plotting import plot
 
 def lagrange(points):
     x = symbols('x')
@@ -28,4 +29,9 @@ while(True):
 
 polynomial = lagrange(points)
 print("Pn(X)= "+str(polynomial))
+grafica=plot(polynomial,show=False)
+grafica.tittle="Gráfica!"
+grafica.xlabel="X"
+grafica.ylabel="Y"
+grafica.show()
 

@@ -1,4 +1,5 @@
 import sympy as sp
+from sympy.plotting import plot
 
 def newton_interpolation(x_data, y_data):
     n = len(y_data)
@@ -30,6 +31,12 @@ while(True):
     except ValueError:
         break
 
+simbolo=sp.symbols("x")
 p = newton_interpolation(x_data, y_data)
 print(f"El polinomio interpolante es {p}")
+grafica=plot(p,show=False)
+grafica.tittle="Gráfica!"
+grafica.xlabel="X"
+grafica.ylabel="Y"
+grafica.show()
 
