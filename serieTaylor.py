@@ -31,4 +31,9 @@ while(True):
         function=derivada
     serie+=(evaluaciones[i]/factorial(i))*(X-x0)**i
     i+=1
-print(serie)
+print(f"La serie resultante es: {serie}")
+grafica=plot(serie,show=False)
+grafica.tittle="Gráfica!"
+grafica.xlabel="X"
+grafica.ylabel="Y"
+grafica.show()
