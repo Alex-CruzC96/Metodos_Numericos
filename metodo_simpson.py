@@ -21,6 +21,7 @@ impares=0
 xi=x1
 for i in range(1,n+1):
     print(f"x{i} = {xi}")
+    print(f"f(x{i}) = {f(xi)}"+"\n")  
     if(i % 2 == 0):
         pares+=f(xi)
     elif(i!=1):
